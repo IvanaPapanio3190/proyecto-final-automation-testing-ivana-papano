@@ -38,13 +38,10 @@ Se implementaron validaciones con **WebDriverWait** para asegurar la estabilidad
 * **Logout**: Verificación de retorno exitoso al formulario de inicio.
 
 ## 5. Instrucciones de Ejecución
-Para ejecutar las pruebas y generar el reporte técnico, utilice el siguiente comando en la terminal:
-```bash
-py -m pytest Tests/ -v --html=Reports/reporte_final.html  
-` ``` `
 
-## 6. Evidencias
-Los resultados de la última ejecución muestran un 100% de éxito (4/4 tests passed).
-Puede encontrar el reporte detallado en Reports/reporte_final.html y las capturas de pantalla en Reports/capturasPantalla/.
+Para ejecutar las pruebas y generar el reporte técnico, utilice el siguiente comando en la terminal:
+
+```bash
+py -m pytest Tests/ -v --html=Reports/reporte_final.html
 
 
