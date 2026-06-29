@@ -1,5 +1,7 @@
 # Proyecto Final Automation Testing - Ivana Papaño
 
+---
+
 Proyecto de automatización para el sitio SauceDemo - Talento Tech 2026
 
 
@@ -11,6 +13,7 @@ Proyecto de automatización para el sitio SauceDemo - Talento Tech 2026
 * [5. Instrucciones de Ejecución](#5-instrucciones-de-ejecución)
 * [6. Reportes y Evidencias](#6-evidencias)
 * [7. Integración Continua (CI/CD)](#7-integración-continua-cicd)
+* [8. Informacion del Proyecto](#8-información-del-proyecto)
 
 ---
 
@@ -76,6 +79,7 @@ Para preparar el entorno local y ejecutar las suites de prueba, siga estos pasos
   ```
 
 ### **Ejecución de las suites**
+
 * **Para correr Pytest (Web + API):** `pytest`
 * **Para correr Behave (BDD):** `behave` 
 
@@ -84,15 +88,26 @@ Para preparar el entorno local y ejecutar las suites de prueba, siga estos pasos
 ## 6. Reportes y Evidencias
 
 
-* **Interpretación del Reporte:** Tras finalizar la ejecución de Pytest, se actualizará el archivo **`report_final.html`** dentro de la carpeta `Reports/`. Al abrirlo en cualquier navegador web, este reporte interactivo muestra:
+* **Interpretación del Reporte:** Tras finalizar la ejecución de Pytest, se actualizará el archivo **`report_Final.html`** dentro de la carpeta del proyecto. Al abrirlo en cualquier navegador web, este reporte interactivo muestra:
   - El estado final de cada test (Pasado / Fallado / Erróneo).
   - La duración exacta de cada prueba.
   - El historial de logs técnicos detallados para depuración.
 
 
-* **Manejo Automático de Capturas (Screenshots):** Si alguna prueba de UI llega a fallar, el framework captura automáticamente la pantalla en ese instante preciso y **la incrusta directamente dentro del reporte HTML**, guardando además la evidencia física `.png` con la fecha y hora exacta del suceso.
+* **Manejo Automático de Capturas (Screenshots):** Si alguna prueba de UI llega a fallar, el framework captura automáticamente la pantalla en ese instante preciso y la incrusta directamente dentro del reporte HTML, guardando además la evidencia física `.png` con la fecha y hora exacta del suceso.
 
 ## 7. Integración Continua (CI/CD)
 
-El proyecto cuenta con una integración de **GitHub Actions**. Ante cada evento de `push` o `pull_request` en las ramas principales, un contenedor virtual levanta el entorno de forma automatizada, instala las dependencias mediante el archivo `requirements.txt` y ejecuta la totalidad de las pruebas en la nube, garantizando un flujo continuo de calidad (CI).
+El proyecto cuenta con una integración de **GitHub Actions**. Ante cada evento de `push` o `pull_request` en las ramas principales, un contenedor virtual levanta el entorno de forma automatizada, instala las dependencias mediante el archivo `requirements.txt` y ejecuta la totalidad de las pruebas en la nube en modo **Headless (navegador invisible)**, garantizando un flujo continuo de calidad (CI).
+
+---
+
+## 8. Información del Proyecto
+
+* **Desarrollado por:** Ivana Papaño - QA Automation
+* **Proyecto Final:** Curso de Automation Testing 
+* **Programa:** Talento Tech 2026
+* **Profesor/Tutor:** José Montezuma
+
+---
 
