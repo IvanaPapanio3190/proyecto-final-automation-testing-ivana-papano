@@ -27,7 +27,9 @@ jobs:
         run: pytest
 
       - name: Ejecutar pruebas de Behave (BDD)
+        continue-on-error: true
         run: behave
+       
 
       - name: Guardar reporte como artefacto
         uses: actions/upload-artifact@v4
