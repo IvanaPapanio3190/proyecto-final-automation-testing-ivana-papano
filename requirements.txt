@@ -1,0 +1,7 @@
+Pytest==9.0.3
+selenium==4.29.0
+pytest-html==4.1.1
+pytest-check==2.4.2
+requests==2.32.3
+behave==1.2.6
+webdriver-manager==4.0.2

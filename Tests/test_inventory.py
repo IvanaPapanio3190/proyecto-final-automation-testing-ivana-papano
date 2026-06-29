@@ -2,6 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import pytest
 
+from Page.InventoryPage import InventoryPage
+from Page.LoginPage import LoginPage
+
 @pytest.fixture
 def driver_logged(login_in_driver):
     driver = login_in_driver
@@ -38,7 +41,7 @@ def test_listar_primer_producto(driver_logged):
     nombre = primer_producto.find_element(By.CLASS_NAME, "inventory_item_name").text
     precio = primer_producto.find_element(By.CLASS_NAME, "inventory_item_price").text
     
-    # Lo imprimimos en consola (esto va a salir impecable en el reporte HTML)
+    # Lo imprimimos en consola 
     print(f"\n[INFO TP] Primer producto del catálogo: {nombre} | Precio: {precio}")
     
     # Validaciones de seguridad
