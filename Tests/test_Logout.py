@@ -5,7 +5,6 @@ import time
 
  
 def test_logout_exitoso(login_in_driver):
-    driver = webdriver.Chrome()
     try:
         # Usamos el driver que ya viene logueado
         driver = login_in_driver

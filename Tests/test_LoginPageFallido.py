@@ -4,8 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import pytest
 
-def test_login_credenciales_invalidas():
-    driver = webdriver.Chrome()
+def test_login_credenciales_invalidas(driver):
     wait = WebDriverWait(driver, 10)
     
     try:
@@ -23,8 +22,8 @@ def test_login_credenciales_invalidas():
         assert "Username and password do not match" in error_container.text
         print("Test Negativo: Error de login validado correctamente.")
         
-    finally:
-        driver.quit()
-
+    except Exception as e:
+        print(f"Error en test_login_credenciales_invalidas: {e}")
+        raise
         
 

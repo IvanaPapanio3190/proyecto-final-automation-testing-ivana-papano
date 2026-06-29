@@ -3,8 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-def test_usuario_bloqueado():
-    driver = webdriver.Chrome()
+def test_usuario_bloqueado(driver):
     wait = WebDriverWait(driver, 10)
     try:
         driver.get("https://www.saucedemo.com/")
@@ -17,7 +16,8 @@ def test_usuario_bloqueado():
         error_msg = wait.until(EC.visibility_of_element_located((By.XPATH, "//h3[@data-test='error']")))
         assert "Sorry, this user has been locked out" in error_msg.text
         print("Test Bloqueado: Validado con éxito.")
-    finally:
-        driver.quit()
+    except Exception as e:
+        print(f"Error en test_usuario_bloqueado: {e}")
+        raise
 
         
